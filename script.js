@@ -40,8 +40,11 @@ function fillU(){
 }
 
 // Fill all cells
-function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+function fillAll() {
+    let cells = document.getElementsByTagName("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = colorSelected;
+    }
 }
 
 // Clear all cells
