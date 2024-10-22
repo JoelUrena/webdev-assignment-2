@@ -1,3 +1,15 @@
+READ ME FILE GROUP MEMBERS : TANGEER MOSOBBIR, JOEL URENA, DOUGLAS ROLLMAN
+
+github usernames:
+
+tangeer.mosobbir73@myhunter.cuny.edu
+douglaswrollman@gmail.com 
+joelurena711@gmail.com
+
+
+git hub deployed webpage link: 
+
+
 # grid-maker-starter-code
 This repository is the starter code for Assignment 2 - Grid Maker.
 
