@@ -8,7 +8,7 @@ joelurena711@gmail.com
 
 
 git hub deployed webpage link: 
-
+https://joelurena.github.io/webdev-assignment-2/
 
 # grid-maker-starter-code
 This repository is the starter code for Assignment 2 - Grid Maker.
