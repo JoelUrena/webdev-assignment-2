@@ -69,11 +69,6 @@ function fillAll() {
 }
 
 // Clear all cells
-function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
-}
-
-// Clear all cells
 function clearAll() {
     let cells = document.getElementsByTagName("td");
     for (let i = 0; i < cells.length; i++) {
