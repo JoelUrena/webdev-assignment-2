@@ -3,14 +3,49 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected; 
 
-// Add a row
-function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+function addR() 
+{
+    // Get the grid element
+    let grid = document.getElementById("grid");
+    // Create a new row element
+    let newRow = grid.insertRow();
+    // Determine how many columns the grid has
+    /*
+        If the first grid.rows[0] exists, 
+        we try to get the length to the collection of cells in row [0]; 
+        otherwise, numCols is asigned
+    */
+    let numCols = grid.rows[0] ? grid.rows[0].cells.length : numCols;
+    // Loop through the columns and add a new cell to the new row
+    for (let i = 0; i < numCols; i++) 
+    {
+        let newCell = newRow.insertCell(i);
+        newCell.style.backgroundColor = "white";  // Set the default color of the cell
+        newCell.onclick = function() 
+        {newCell.style.backgroundColor = colorSelected;};
+    }
+
+    numRows++;
+
 }
 
 // Add a column
-function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+function addC() 
+{
+    // Get the grid element
+    let grid = document.getElementById("grid");
+    // Loop through all rows in the grid
+    for (let i = 0; i < grid.rows.length; i++) 
+        {
+            let newCell = grid.rows[i].insertCell();
+            newCell.style.backgroundColor = "white";
+            newCell.onclick = function() 
+            { newCell.style.backgroundColor = colorSelected;};
+    }
+    
+    // Increment the column count
+    numCols++;
+
 }
 
 // Remove a row
