@@ -67,13 +67,6 @@ function removeC() {
             grid.rows[i].deleteCell(numCols - 1);  // Remove the last column from each row
         }
         numCols--;  // Update column count
-        // Remove the entire row if it's empty (after all columns are removed)
-        if (numCols === 0) {
-            while (numRows > 0) {
-                grid.deleteRow(0);  // Remove all rows
-                numRows--;
-            }
-        }
     } else {
         alert("No columns to remove!");
     }
