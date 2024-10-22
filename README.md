@@ -14,7 +14,7 @@ git hub deployed webpage link:
 This repository is the starter code for Assignment 2 - Grid Maker.
 
 ### Live Link
-[Website link](https://johnnylaicode.github.io/grid-maker-starter-code/)
+[Website link](https://joelurena.github.io/webdev-assignment-2/index.html)
 
 ----------
 ### 1. Use the following process to ***import*** the Assignment 2 starter code repository to your GitHub account as the starter codebase
