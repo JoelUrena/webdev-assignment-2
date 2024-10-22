@@ -54,3 +54,5 @@ function clearAll() {
         cells[i].style.backgroundColor = "white";
     }
 }
+
+// Fill all cells with selected color
