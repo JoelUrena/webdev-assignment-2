@@ -63,10 +63,15 @@ function removeR() {
 function removeC() {
     if (numCols > 0) {
         let grid = document.getElementById("grid");
+
+        // Loop through the rows from bottom to top
         for (let i = 0; i < numRows; i++) {
-            grid.rows[i].deleteCell(numCols - 1);  // Remove the last column from each row
+            // Remove the last cell (column) from each row
+            grid.rows[i].deleteCell(numCols - 1);
         }
-        numCols--;  // Update column count
+
+        // Decrease the number of columns after removal
+        numCols--;
     } else {
         alert("No columns to remove!");
     }
