@@ -15,12 +15,33 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if (numRows > 0) {
+        let grid = document.getElementById("grid");
+        grid.deleteRow(numRows - 1);  // Remove the last row
+        numRows--;  // Update row count
+    } else {
+        alert("No rows to remove!");
+    }
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if (numCols > 0) {
+        let grid = document.getElementById("grid");
+        for (let i = 0; i < numRows; i++) {
+            grid.rows[i].deleteCell(numCols - 1);  // Remove the last column from each row
+        }
+        numCols--;  // Update column count
+        // Remove the entire row if it's empty (after all columns are removed)
+        if (numCols === 0) {
+            while (numRows > 0) {
+                grid.deleteRow(0);  // Remove all rows
+                numRows--;
+            }
+        }
+    } else {
+        alert("No columns to remove!");
+    }
 }
 
 // Set global variable for selected color
