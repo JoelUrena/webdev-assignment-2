@@ -65,8 +65,11 @@ function removeC() {
         let grid = document.getElementById("grid");
 
         // Loop through all rows and remove the last cell (column)
-        for (let i = 0; i < numRows; i++) {
-            grid.rows[i].deleteCell(numCols - 1); // Remove the last column from each row
+        for (let i = 0; i < grid.rows.length; i++) {
+            // Check if the row has cells before trying to remove one
+            if (grid.rows[i].cells.length > 0) {
+                grid.rows[i].deleteCell(grid.rows[i].cells.length - 1); // Remove the last column from each row
+            }
         }
 
         // Decrease the column count after removal
